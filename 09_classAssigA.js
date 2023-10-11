@@ -40,5 +40,53 @@ console.log(`<--Vehicle type and it's details--> \nBrand Name:${vehicleBMW.brand
 console.log(`******************Traverse array of vehicle******************\n`);
 let arrayOfVehicles = [vehicleTata, vehicleHonda, vehicleSuzuki, vehicleMahindra, vehicleBMW];
 for (const element of arrayOfVehicles) {
-    console.log(`Vehicle Brand- ${element.brand}, \nTop Speed- ${element.top_speed}, \nMileage- ${element.mileage}, \nColor- ${element.color}, \nSeating Capacity- ${element.seating_capacity}, \nChassis Number- ${element.chassis_number}\n**************************************`);
+    console.log(`Vehicle Brand- ${element.brand}, \nTop Speed- ${element.top_speed}, \nMileage- ${element.mileage}, \nColor- ${element.color}, \nSeating Capacity- ${element.seating_capacity}, \nChassis Number- ${element.chassis_number}\n**************************************\n`);
 }
+
+console.log(`*************Class College*************\n`);
+
+class College{
+    collegeName
+    department
+    city
+    numberOfTeachers
+    totalStudents
+
+    constructor(collegeName, department, city, numberOfTeachers, totalStudents){
+        this.collegeName = collegeName;
+        this.department = department;
+        this.city = city;
+        this.numberOfTeachers = numberOfTeachers;
+        this.totalStudents = totalStudents;
+    }
+
+    display(collegeName, department, city, numberOfTeachers, totalStudents){
+        console.log(`College Name: ${this.collegeName}\nDepartment: ${this.department}\nCity: ${this.city}\nNumber Of Teachers: ${this.numberOfTeachers}\nTotal Students: ${this.totalStudents}`);
+    }
+}
+
+let college1 = new College("CCS, Wakad", "Computer Science", "Pune", 50, 1000);
+college1.display();
+console.log(`\n*************************************`);
+let college2 = new College("Sangola COllege", "Computer Science", "Sangola", 30, 1300);
+college2.display();
+let college3 = new College("Walchand College", "Science College", "Satara", 100, 4000);
+college3.display();
+let college4 = new College("Sangmeshwar College", "Computer Science", "solapur", 70, 2000);
+college4.display();
+
+console.log(`*************Traverse function*************\n`);
+
+function traverseObject(arg){
+    for (const element in arg) {
+        console.log(`${element}, ${arg[element]}`);
+    }
+}
+traverseObject(college1);
+console.log(`\n*************************************`);
+traverseObject(college2);
+console.log(`\n*************************************`);
+traverseObject(college3);
+console.log(`\n*************************************`);
+traverseObject(college4);
+console.log(`\n*************************************`);
